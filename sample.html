@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Bootstrap E-commerce Template</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <!-- Custom styles -->
+    <style>
+      
+        .dropdown-submenu {
+          position: relative;
+        }
+        .dropdown-submenu .dropdown-menu {
+          top: 0;
+          left: 100%;
+          margin-top: -1px;
+        }
+        .dropdown-submenu:hover .dropdown-menu {
+          display: block;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .hero-section {
+            background: url('./image.jpg') no-repeat center center;
+            background-size: cover;
+            height: 600px;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .product-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 50%;
+            margin-right: 15px;
+            font-size: 24px;
+            color: #0d6efd;
+        }
+        .footer {
+            background-color: #f8f9fa;
+        }
+        .flag {
+            width: 20px;
+            height: 15px;
+            display: inline-block;
+            background-size: cover;
+            margin-right: 5px;
+        }
+        .flag-united-kingdom {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/gb.svg');
+        }
+        .flag-poland {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pl.svg');
+        }
+        .flag-china {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/cn.svg');
+        }
+        .flag-japan {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/jp.svg');
+        }
+        .flag-germany {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/de.svg');
+        }
+        .flag-france {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/fr.svg');
+        }
+        .flag-spain {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/es.svg');
+        }
+        .flag-russia {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/ru.svg');
+        }
+        .flag-portugal {
+            background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg');
+        }
+    </style>
+</head>
+<body>
+    <!-- Header/Navbar -->
+  <header>
+  <!-- Fixed Top Navigation -->
+  <div class="bg-light py-2 fixed-top shadow-sm" style="z-index: 1030;">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- Search (left on desktop, first on mobile) -->
+        <div class="col-6 col-md-4 order-2 order-md-1">
+          <form class="position-relative">
+            <span class="position-absolute top-50 start-0 translate-middle-y ps-3">
+              <i class="fas fa-search"></i>
+            </span>
+            <input type="text" class="form-control ps-5 border-0 bg-white" placeholder="Search">
+          </form>
+        </div>
+
+        <!-- Logo (center) -->
+        <div class="col-12 col-md-4 order-1 order-md-2 text-center mb-3 mb-md-0">
+          <a href="index.html" class="text-decoration-none">
+            <h3 class="m-0">BikesHQ</h3>
+          </a>
+        </div>
+
+        <!-- Icons (right) -->
+        <div class="col-6 col-md-4 order-3 order-md-3 text-end">
+          <div class="d-inline-block">
+            <ul class="list-inline mb-0">
+              <li class="list-inline-item me-3">
+                <a href="#" class="text-dark"><i class="fas fa-user"></i></a>
+              </li>
+              <li class="list-inline-item me-3">
+                <a href="#" class="text-dark"><i class="far fa-heart"></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="cart.html" class="text-dark position-relative">
+                  <i class="fas fa-shopping-cart"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    2
+                  </span>
+                </a>
+              </li>
+              <li class="list-inline-item d-md-none">
+                <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Fixed Main Navigation -->
+  <nav class="navbar navbar-expand-md bg-white py-3 d-none d-md-block fixed-top shadow-sm" style="margin-top: 52px; z-index: 1029;">
+    <div class="container justify-content-center">
+      <ul class="navbar-nav">
+        <!-- Home with dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="index.html" id="homeDropdown" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu One</a></li>
+            <li><a class="dropdown-item" href="#">Menu Two</a></li>
+            <li><a class="dropdown-item" href="#">Menu Three</a></li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Sub Menu</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Menu One</a></li>
+                <li><a class="dropdown-item" href="#">Menu Two</a></li>
+                <li><a class="dropdown-item" href="#">Menu Three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- About with dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown" role="button" data-bs-toggle="dropdown">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu One</a></li>
+            <li><a class="dropdown-item" href="#">Menu Two</a></li>
+            <li><a class="dropdown-item" href="#">Menu Three</a></li>
+          </ul>
+        </li>
+
+        <!-- Other links -->
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Catalogue</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">New Arrivals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Add padding to the top of the body to prevent content from being hidden behind fixed header -->
+  <div style="padding-top: 100px;"></div>
+
+  <!-- Mobile Menu Offcanvas -->
+  <div class="offcanvas offcanvas-start d-md-none" tabindex="-1" id="mobileMenu" style="margin-top: 56px;">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <!-- Home with dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="index.html" id="mobileHomeDropdown" role="button" data-bs-toggle="dropdown">
+            Home
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu One</a></li>
+            <li><a class="dropdown-item" href="#">Menu Two</a></li>
+            <li><a class="dropdown-item" href="#">Menu Three</a></li>
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle" href="#">Sub Menu</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Menu One</a></li>
+                <li><a class="dropdown-item" href="#">Menu Two</a></li>
+                <li><a class="dropdown-item" href="#">Menu Three</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <!-- About with dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="about.html" id="mobileAboutDropdown" role="button" data-bs-toggle="dropdown">
+            About
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Menu One</a></li>
+            <li><a class="dropdown-item" href="#">Menu Two</a></li>
+            <li><a class="dropdown-item" href="#">Menu Three</a></li>
+          </ul>
+        </li>
+
+        <!-- Other links -->
+        <li class="nav-item">
+          <a class="nav-link" href="shop.html">Shop</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Catalogue</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">New Arrivals</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Add this CSS for dropdown-submenu -->
+  <style>
+    .dropdown-submenu {
+      position: relative;
+    }
+    .dropdown-submenu .dropdown-menu {
+      top: 0;
+      left: 100%;
+      margin-top: -1px;
+    }
+    .dropdown-submenu:hover .dropdown-menu {
+      display: block;
+    }
+  </style>
+  <div class="hero-section">
+    <div class="hero-overlay d-flex align-items-center justify-content-center">
+        <div class="text-white text-center">
+            <h1 class="mb-3">Learn Bootstrap 5</h1>
+            <h5 class="mb-4">Best & free guide of responsive web design</h5>
+            <a class="btn btn-outline-light btn-lg m-2" href="#" role="button">Start tutorial</a>
+            <a class="btn btn-outline-light btn-lg m-2" href="#" role="button">Download UI KIT</a>
+        </div>
+    </div>
+  </div>
+</header>
+
+<!-- Add this CSS for dropdown-submenu -->
+
+    <!-- Products Section -->
+    <section class="py-5">
+        <div class="container">
+            <header class="mb-4">
+                <h3>New products</h3>
+            </header>
+            
+            <div class="row">
+                <!-- Product 1 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/1.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">GoPro HERO6 4K Action Camera - Black</h5>
+                            <p class="card-text">$790.50</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/2.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Canon camera 20x zoom, Black color EOS 2000</h5>
+                            <p class="card-text">$320.00</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/3.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Xiaomi Redmi 8 Original Global Version 4GB</h5>
+                            <p class="card-text">$120.00</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/4.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Apple iPhone 12 Pro 6.1" RAM 6GB 512GB Unlocked</h5>
+                            <p class="card-text">$120.00</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/5.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Apple Watch Series 1 Sport Case 38mm Black</h5>
+                            <p class="card-text">$790.50</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/6.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">T-shirts with multiple colors, for men and lady</h5>
+                            <p class="card-text">$120.00</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/7.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Gaming Headset 32db Blackbuilt in mic</h5>
+                            <p class="card-text">$99.50</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                    <div class="card product-card h-100">
+                        <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/8.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">T-shirts with multiple colors, for men and lady</h5>
+                            <p class="card-text">$120.00</p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <header class="mb-4">
+                <h3>Why choose us</h3>
+            </header>
+            
+            <div class="row">
+                <!-- Feature 1 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-camera-retro"></i>
+                        </div>
+                        <div>
+                            <h6>Reasonable prices</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <h6>Best quality</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div>
+                            <h6>Worldwide shipping</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div>
+                            <h6>Customer satisfaction</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div>
+                            <h6>Happy customers</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <div>
+                            <h6>Thousand items</h6>
+                            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Blog Section -->
+    <section class="py-5">
+        <div class="container">
+            <header class="mb-4">
+                <h3>Blog posts</h3>
+            </header>
+            
+            <div class="row">
+                <!-- Blog 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article>
+                        <a href="#">
+                            <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/1.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+                        </a>
+                        <div class="text-muted small mb-1">
+                            <i class="far fa-calendar-alt me-1"></i>
+                            23.12.2022
+                        </div>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h6>How to promote brands</h6>
+                        </a>
+                        <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                    </article>
+                </div>
+                
+                <!-- Blog 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article>
+                        <a href="#">
+                            <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/2.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+                        </a>
+                        <div class="text-muted small mb-1">
+                            <i class="far fa-calendar-alt me-1"></i>
+                            13.12.2022
+                        </div>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h6>How we handle shipping</h6>
+                        </a>
+                        <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                    </article>
+                </div>
+                
+                <!-- Blog 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article>
+                        <a href="#">
+                            <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/3.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+                        </a>
+                        <div class="text-muted small mb-1">
+                            <i class="far fa-calendar-alt me-1"></i>
+                            25.11.2022
+                        </div>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h6>How to promote brands</h6>
+                        </a>
+                        <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                    </article>
+                </div>
+                
+                <!-- Blog 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <article>
+                        <a href="#">
+                            <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/4.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+                        </a>
+                        <div class="text-muted small mb-1">
+                            <i class="far fa-calendar-alt me-1"></i>
+                            03.09.2022
+                        </div>
+                        <a href="#" class="text-decoration-none text-dark">
+                            <h6>Success story of sellers</h6>
+                        </a>
+                        <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row">
+                <!-- Logo and copyright -->
+                <div class="col-lg-3 col-sm-12 mb-4">
+                    <a href="#">
+                        <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="35" alt="Logo">
+                    </a>
+                    <p class="mt-2">
+                        © 2023 Copyright: Example.com
+                    </p>
+                </div>
+                
+                <!-- Store links -->
+                <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                    <h6 class="fw-bold mb-3">Store</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">About us</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Find store</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Categories</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blogs</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Information links -->
+                <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                    <h6 class="fw-bold mb-3">Information</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Help center</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Money refund</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Shipping info</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Refunds</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support links -->
+                <div class="col-6 col-sm-4 col-lg-2 mb-3">
+                    <h6 class="fw-bold mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Help center</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Documents</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Account restore</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">My orders</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Newsletter -->
+                <div class="col-lg-3 col-sm-12 mb-3">
+                    <h6 class="fw-bold mb-3">Newsletter</h6>
+                    <p class="text-muted">Stay in touch with latest updates about our products and offers</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <button class="btn btn-outline-secondary" type="button">
+                            Join
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top pt-4">
+                <div class="d-flex justify-content-between">
+                    <!-- Payment methods -->
+                    <div>
+                        <i class="fab fa-cc-visa fa-lg me-2 text-muted"></i>
+                        <i class="fab fa-cc-amex fa-lg me-2 text-muted"></i>
+                        <i class="fab fa-cc-mastercard fa-lg me-2 text-muted"></i>
+                        <i class="fab fa-cc-paypal fa-lg me-2 text-muted"></i>
+                    </div>
+                    
+                    <!-- Language selector -->
+                    <div class="dropdown">
+                        <a class="dropdown-toggle text-decoration-none text-dark" href="#" role="button" data-bs-toggle="dropdown">
+                            <span class="flag-united-kingdom flag me-1"></span>English
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                                <a class="dropdown-item" href="#">
+                                    <span class="flag-united-kingdom flag me-1"></span>English
+                                </a>
+                            </li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-poland flag me-1"></span>Polski</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-china flag me-1"></span>中文</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-japan flag me-1"></span>日本語</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-germany flag me-1"></span>Deutsch</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-france flag me-1"></span>Français</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-spain flag me-1"></span>Español</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-russia flag me-1"></span>Русский</a></li>
+                            <li><a class="dropdown-item" href="#"><span class="flag-portugal flag me-1"></span>Português</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

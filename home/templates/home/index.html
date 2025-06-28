@@ -1,0 +1,253 @@
+{% extends "../basee.html" %}
+{% load static %}
+{% block title %}BikesHQ Shop{% endblock %}
+{% block css%}<link rel='stylesheet' href="{% static 'css/base.css' %}">{% endblock %}
+{% block content %}
+<div class="hero-section">
+  <div class="hero-overlay d-flex align-items-center justify-content-center">
+    <div class="text-white text-center">
+      <h1 class="mb-3">Learn Bootstrap 5</h1>
+      <h5 class="mb-4">Best & free guide of responsive web design</h5>
+      <a class="btn btn-outline-light btn-lg m-2" href="#" role="button">Start tutorial</a>
+      <a class="btn btn-outline-light btn-lg m-2" href="#" role="button">Download UI KIT</a>
+    </div>
+  </div>
+</div>
+
+<section class="py-5">
+  <div class="container">
+    <header class="mb-4">
+        <h3>New products</h3>
+    </header>
+    <div class="row">
+      {% for product in products %}
+      <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+        <div class="card product-card h-100">
+          <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/1.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.price }}</p>
+            <div class="mt-auto">
+                <a href="#" class="btn btn-primary me-1">Add to cart</a>
+                <a href="#" class="btn btn-outline-secondary"><i class="fas fa-heart"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="text-center mt-5">
+        <a href="products.html" class="btn btn-outline-primary btn-lg">View All Products</a>
+    </div>
+  </div>
+</section>
+<section id="categories" class="section-padding bg-light">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-5 fw-bold mb-3">Shop by Category</h2>
+                    <p class="lead text-muted">Explore our wide range of product categories</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-laptop"></i>
+                        </div>
+                        <h4>Electronics</h4>
+                        <p class="text-muted">Latest gadgets and tech accessories</p>
+                        <a href="products.html?category=electronics" class="btn btn-outline-primary">Browse</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-person-circle"></i>
+                        </div>
+                        <h4>Fashion</h4>
+                        <p class="text-muted">Trendy clothing and accessories</p>
+                        <a href="products.html?category=fashion" class="btn btn-outline-primary">Browse</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="category-card">
+                        <div class="category-icon">
+                            <i class="bi bi-house"></i>
+                        </div>
+                        <h4>Home & Living</h4>
+                        <p class="text-muted">Furniture and home decor items</p>
+                        <a href="products.html?category=home" class="btn btn-outline-primary">Browse</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Features Section -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <header class="mb-4">
+        <h3>Why choose us</h3>
+    </header>
+    
+    <div class="row">
+      <!-- Feature 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="feature-icon">
+              <i class="fas fa-camera-retro"></i>
+          </div>
+          <div>
+              <h6>Reasonable prices</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="feature-icon">
+              <i class="fas fa-star"></i>
+          </div>
+          <div>
+              <h6>Best quality</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="feature-icon">
+              <i class="fas fa-plane"></i>
+          </div>
+          <div>
+              <h6>Worldwide shipping</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 4 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="feature-icon">
+              <i class="fas fa-users"></i>
+          </div>
+          <div>
+              <h6>Customer satisfaction</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 5 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex align-items-center">
+          <div class="feature-icon">
+              <i class="fas fa-thumbs-up"></i>
+          </div>
+          <div>
+              <h6>Happy customers</h6>
+              <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Feature 6 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+          <div class="d-flex align-items-center">
+              <div class="feature-icon">
+                  <i class="fas fa-box"></i>
+              </div>
+              <div>
+                  <h6>Thousand items</h6>
+                  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmor</p>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <header class="mb-4">
+        <h3>Blog posts</h3>
+    </header>
+    
+    <div class="row">
+      <!-- Blog 1 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <article>
+            <a href="#">
+                <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/1.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+            </a>
+            <div class="text-muted small mb-1">
+                <i class="far fa-calendar-alt me-1"></i>
+                23.12.2022
+            </div>
+            <a href="#" class="text-decoration-none text-dark">
+                <h6>How to promote brands</h6>
+            </a>
+            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+        </article>
+      </div>
+      
+      <!-- Blog 2 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <article>
+            <a href="#">
+                <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/2.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+            </a>
+            <div class="text-muted small mb-1">
+                <i class="far fa-calendar-alt me-1"></i>
+                13.12.2022
+            </div>
+            <a href="#" class="text-decoration-none text-dark">
+                <h6>How we handle shipping</h6>
+            </a>
+            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+        </article>
+      </div>
+      
+      <!-- Blog 3 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <article>
+            <a href="#">
+                <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/3.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+            </a>
+            <div class="text-muted small mb-1">
+                <i class="far fa-calendar-alt me-1"></i>
+                25.11.2022
+            </div>
+            <a href="#" class="text-decoration-none text-dark">
+                <h6>How to promote brands</h6>
+            </a>
+            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+        </article>
+      </div>
+      
+      <!-- Blog 4 -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <article>
+            <a href="#">
+                <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/posts/4.webp" class="img-fluid rounded mb-2" style="height: 160px; width: 100%; object-fit: cover;" alt="Blog post">
+            </a>
+            <div class="text-muted small mb-1">
+                <i class="far fa-calendar-alt me-1"></i>
+                03.09.2022
+            </div>
+            <a href="#" class="text-decoration-none text-dark">
+                <h6>Success story of sellers</h6>
+            </a>
+            <p class="text-muted">When you enter into any new area of science, you almost reach</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
