@@ -12,18 +12,25 @@ class Product(models.Model):
         max_length=250,
         unique=True,
     )
+    price = models.DecimalField(max_digits=10, decimal_places=2)
     description = models.TextField()
-    price = models.IntegerField()
+    specs = models.JSONField(default=dict)
+    image_url = models.URLField(max_length=500, blank=True)
     stock = models.IntegerField()
     is_available = models.BooleanField(default=True)
-    image = models.ImageField(upload_to="shop/")
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="shop/", blank=True, null=True)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.PROTECT,
+        limit_choices_to={"parent__isnull": False},
+        related_name="products",
+    )
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ["-updated_at"]
+        ordering = ["-created_at"]
 
     def __str__(self):
         return self.name

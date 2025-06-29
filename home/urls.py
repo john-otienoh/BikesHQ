@@ -7,7 +7,7 @@ from .views import home
 # app_name = "account"
 
 urlpatterns = [
-    path('home/', home, name='home'),
+    path("home/", home, name="home"),
     path(
         "login/",
         CustomLoginView.as_view(

@@ -1,0 +1,380 @@
+[
+  {
+    "id": 1,
+    "name": "Trek Emonda SL 6",
+    "price": 3499.99,
+    "description": "Lightweight carbon road bike with Shimano Ultegra groupset.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "8.1 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 2,
+    "name": "Specialized Tarmac SL7",
+    "price": 5999.99,
+    "description": "Aero-optimized race bike with Shimano Dura-Ace.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.3 kg",
+      "tires": "700x26c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 3,
+    "name": "Cannondale SuperSix Evo",
+    "price": 4299.99,
+    "description": "Balanced performance bike with Shimano 105 Di2.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "8.0 kg",
+      "tires": "700x28c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1532298229144-0a3dca3b4f5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 4,
+    "name": "Giant Defy Advanced 2",
+    "price": 2899.99,
+    "description": "Endurance road bike with compliance for long rides.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "20-speed",
+      "weight": "8.5 kg",
+      "tires": "700x32c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 5,
+    "name": "Bianchi Oltre XR4",
+    "price": 8999.99,
+    "description": "Italian racing bike with Campagnolo Super Record.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.0 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 6,
+    "name": "Scott Addict RC 20",
+    "price": 4999.99,
+    "description": "High-performance bike with integrated aerodynamics.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "7.5 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/239381/pexels-photo-239381.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 7,
+    "name": "Cervelo R5",
+    "price": 6499.99,
+    "description": "Climbing-focused bike with ultralight frame.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "7.2 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 8,
+    "name": "Pinarello Dogma F12",
+    "price": 11999.99,
+    "description": "Tour de France-winning bike with cutting-edge tech.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.1 kg",
+      "tires": "700x26c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 9,
+    "name": "BMC Teammachine SLR01",
+    "price": 8999.99,
+    "description": "Swiss-engineered race machine with Shimano Dura-Ace.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.0 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1532298229144-0a3dca3b4f5f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 10,
+    "name": "Colnago V3Rs",
+    "price": 7999.99,
+    "description": "Italian craftsmanship meets modern aerodynamics.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.3 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 11,
+    "name": "Fuji Transonic 2.1",
+    "price": 3499.99,
+    "description": "Aero road bike with Shimano Ultegra components.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "8.0 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 12,
+    "name": "Merida Reacto 6000",
+    "price": 3799.99,
+    "description": "Wind-cheating design with Shimano 105 Di2.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "8.2 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 13,
+    "name": "Wilier Zero SLR",
+    "price": 8999.99,
+    "description": "Ultralight Italian bike with Campagnolo groupset.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "6.8 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+  {
+    "id": 14,
+    "name": "Cube Litening C:68X",
+    "price": 4999.99,
+    "description": "German-engineered speed machine with Shimano Ultegra.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "22-speed",
+      "weight": "7.5 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.pexels.com/photos/239381/pexels-photo-239381.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "category": "Road Bike"
+  },
+  {
+    "id": 15,
+    "name": "Orbea Orca Aero",
+    "price": 5499.99,
+    "description": "Spanish aero bike with Shimano Dura-Ace.",
+    "specs": {
+      "frame": "Carbon Fiber",
+      "gears": "24-speed",
+      "weight": "7.4 kg",
+      "tires": "700x25c",
+      "brakes": "Hydraulic Disc"
+    },
+    "image": "https://images.unsplash.com/photo-1511994298241-608e28f14fde?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "category": "Road Bike"
+  },
+    {
+      "id": 1,
+      "name": "SpeedX Pro Carbon Road Bike",
+      "category": "Road",
+      "price": 1899.99,
+      "description": "Lightweight carbon frame with Shimano 105 groupset for speed enthusiasts.",
+      "specs": {
+        "frame": "Carbon Fiber",
+        "gears": "22-speed",
+        "tires": "700x25c",
+        "brakes": "Hydraulic Disc"
+      },
+      "image": "https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 15
+    },
+    {
+      "id": 2,
+      "name": "Trek Domane AL 3",
+      "category": "Road",
+      "price": 1299.99,
+      "description": "Aluminum endurance road bike with smooth IsoSpeed decoupler.",
+      "specs": {
+        "frame": "Aluminum",
+        "gears": "18-speed (Shimano Sora)",
+        "tires": "700x32c",
+        "brakes": "Rim Brakes"
+      },
+      "image": "https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 10
+    },
+    {
+      "id": 3,
+      "name": "Giant Talon 29er",
+      "category": "Mountain",
+      "price": 899.99,
+      "description": "Hardtail MTB with 29-inch wheels for trail adventures.",
+      "specs": {
+        "frame": "Aluminum",
+        "gears": "9-speed (Shimano Altus)",
+        "suspension": "Front (100mm)",
+        "tires": "29x2.25\"",
+        "brakes": "Hydraulic Disc"
+      },
+      "image": "https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "stock": 8
+    },
+    {
+      "id": 4,
+      "name": "Specialized Stumpjumper Comp",
+      "category": "Mountain",
+      "price": 3499.99,
+      "description": "Full-suspension MTB with SRAM NX Eagle drivetrain.",
+      "specs": {
+        "frame": "Carbon Fiber",
+        "gears": "12-speed",
+        "suspension": "Front 150mm / Rear 140mm",
+        "tires": "29x2.3\"",
+        "brakes": "SRAM Guide R Hydraulic"
+      },
+      "image": "https://images.unsplash.com/photo-1576435728678-68d0fbf94e91?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 5
+    },
+    {
+      "id": 5,
+      "name": "Cannondale Quick CX 3",
+      "category": "Hybrid",
+      "price": 749.99,
+      "description": "Versatile hybrid bike for city commuting.",
+      "specs": {
+        "frame": "Aluminum",
+        "gears": "8-speed",
+        "tires": "700x35c",
+        "brakes": "Mechanical Disc"
+      },
+      "image": "https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "stock": 12
+    },
+    {
+      "id": 6,
+      "name": "Rad Power Bikes RadRover 6 Plus",
+      "category": "Electric",
+      "price": 1999.99,
+      "description": "Fat-tire e-bike with 750W motor for all terrains.",
+      "specs": {
+        "motor": "750W",
+        "battery": "48V, 14Ah (50+ mile range)",
+        "tires": "26x4\"",
+        "brakes": "Hydraulic Disc"
+      },
+      "image": "https://images.unsplash.com/photo-1558981852-426c6c22a060?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 7
+    },
+    {
+      "id": 7,
+      "name": "Specialized Turbo Vado 4.0",
+      "category": "Electric",
+      "price": 3999.99,
+      "description": "High-performance commuter e-bike with smooth pedal assist.",
+      "specs": {
+        "motor": "Specialized 250W",
+        "battery": "604Wh (90-mile range)",
+        "tires": "700x42c",
+        "brakes": "Hydraulic Disc"
+      },
+      "image": "https://images.pexels.com/photos/2393835/pexels-photo-2393835.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "stock": 4
+    },
+    {
+      "id": 8,
+      "name": "Bianchi Oltre XR4",
+      "category": "Road",
+      "price": 5999.99,
+      "description": "Premium Italian road bike with Campagnolo Super Record.",
+      "specs": {
+        "frame": "Carbon Fiber",
+        "gears": "22-speed",
+        "tires": "700x28c",
+        "brakes": "Hydraulic Disc"
+      },
+      "image": "https://images.unsplash.com/photo-1511994298241-608e28f1f370?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 3
+    },
+    {
+      "id": 9,
+      "name": "Santa Cruz Hightower",
+      "category": "Mountain",
+      "price": 4299.99,
+      "description": "Aggressive trail bike with 145mm rear suspension.",
+      "specs": {
+        "frame": "Carbon Fiber",
+        "gears": "12-speed (SRAM GX Eagle)",
+        "suspension": "Front 150mm / Rear 145mm",
+        "tires": "29x2.4\"",
+        "brakes": "SRAM Code RSC"
+      },
+      "image": "https://images.pexels.com/photos/248547/pexels-photo-248547.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "stock": 6
+    },
+    {
+      "id": 10,
+      "name": "Electra Loft 7D",
+      "category": "Hybrid",
+      "price": 599.99,
+      "description": "Stylish urban bike with relaxed geometry.",
+      "specs": {
+        "frame": "Steel",
+        "gears": "7-speed",
+        "tires": "700x32c",
+        "brakes": "Linear Pull"
+      },
+      "image": "https://images.unsplash.com/photo-1532298229144-0ec0c57515c7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "stock": 9
+    }
+  ]

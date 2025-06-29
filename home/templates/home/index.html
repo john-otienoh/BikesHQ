@@ -23,7 +23,7 @@
       {% for product in products %}
       <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
         <div class="card product-card h-100">
-          <img src="https://mdbootstrap.com/img/bootstrap-ecommerce/items/1.webp" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
+          <img src="{{ product.image_url }}" class="card-img-top" alt="Product" style="aspect-ratio: 1 / 1;">
           <div class="card-body d-flex flex-column">
             <h5 class="card-title">{{ product.name }}</h5>
             <p class="card-text">{{ product.price }}</p>
@@ -34,6 +34,8 @@
           </div>
         </div>
       </div>
+      {% empty %}
+        <p>No bikes found.</p>
       {% endfor %}
     </div>
     <div class="text-center mt-5">
@@ -42,47 +44,29 @@
   </div>
 </section>
 <section id="categories" class="section-padding bg-light">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <h2 class="display-5 fw-bold mb-3">Shop by Category</h2>
-                    <p class="lead text-muted">Explore our wide range of product categories</p>
-                </div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <h2 class="display-5 fw-bold mb-3">Shop by Category</h2>
+        <p class="lead text-muted">Explore our wide range of product categories</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      {% for pc in parent_categories %}
+        <div class="col-md-4">
+          <div class="category-card">
+            <div class="category-icon">
+                <i class="{{ pc.icon }}"></i>
             </div>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="bi bi-laptop"></i>
-                        </div>
-                        <h4>Electronics</h4>
-                        <p class="text-muted">Latest gadgets and tech accessories</p>
-                        <a href="products.html?category=electronics" class="btn btn-outline-primary">Browse</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="bi bi-person-circle"></i>
-                        </div>
-                        <h4>Fashion</h4>
-                        <p class="text-muted">Trendy clothing and accessories</p>
-                        <a href="products.html?category=fashion" class="btn btn-outline-primary">Browse</a>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="category-card">
-                        <div class="category-icon">
-                            <i class="bi bi-house"></i>
-                        </div>
-                        <h4>Home & Living</h4>
-                        <p class="text-muted">Furniture and home decor items</p>
-                        <a href="products.html?category=home" class="btn btn-outline-primary">Browse</a>
-                    </div>
-                </div>
-            </div>
+            <h4>{{ pc.name }}</h4>
+            <p class="text-muted">{{ pc.description|truncatewords:10|linebreaks }}</p>
+            <a href="products.html?category=electronics" class="btn btn-outline-primary">Browse</a>
+          </div>
         </div>
-    </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 <!-- Features Section -->
 <section class="py-5 bg-light">
   <div class="container">

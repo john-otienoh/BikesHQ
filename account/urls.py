@@ -1,13 +1,13 @@
 from django.contrib.auth import views as auth_views
 from django.urls import include, path
-from .views import RegisterView, profile, CustomLoginView,home
+from .views import RegisterView, profile, CustomLoginView, home
 from .forms import LoginForm
 
 
 # app_name = "account"
 
 urlpatterns = [
-    path('home/', home, name='home'),
+    path("home/", home, name="home"),
     # path(
     #     "login/",
     #     CustomLoginView.as_view(

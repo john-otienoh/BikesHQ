@@ -13,7 +13,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 .hero-section {
-    background: url('../images/image.jpg') no-repeat center center;
+    background: url('../images/bikes.jpg') no-repeat center center;
     background-size: cover;
     height: 600px;
     position: relative;
@@ -83,21 +83,19 @@ body {
     background-image: url('https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/flags/4x3/pt.svg');
 }
 .category-card {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .category-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+.category-icon {
+    font-size: 3rem;
+    color: #007bff; 
+    /* margin-bottom: 20px; */
+}
