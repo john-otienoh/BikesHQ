@@ -1,0 +1,314 @@
+{% extends "../basee.html" %}
+{% load static %}
+{% block title %}{{ product.name }}{% endblock %}
+{% block css%}<link rel='stylesheet' href="{% static 'css/product.css' %}">{% endblock %}
+{% block content %}
+<div class="container my-5">
+        <div class="row">
+            <!-- Product Images -->
+            <div class="col-lg-6 mb-4">
+                <div class="position-relative">
+                    <img src="{{ product.image_url }}" 
+                         alt="{{ product.name }}" class="img-fluid product-image w-100" id="mainImage">
+                    <span class="badge badge-sale position-absolute top-0 end-0 m-3">20% OFF</span>
+                </div>
+                
+                <!-- Product Gallery -->
+                <div class="product-gallery mt-3">
+                    <div class="row g-2">
+                        <div class="col-3">
+                            <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                                 alt="Headphones View 1" class="img-fluid w-100" style="height: 80px;">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.pexels.com/photos/3394650/pexels-photo-3394650.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                                 alt="Headphones View 2" class="img-fluid w-100" style="height: 80px;">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                                 alt="Headphones View 3" class="img-fluid w-100" style="height: 80px;">
+                        </div>
+                        <div class="col-3">
+                            <img src="https://images.pexels.com/photos/1094051/pexels-photo-1094051.jpeg?auto=compress&cs=tinysrgb&w=200" 
+                                 alt="Headphones View 4" class="img-fluid w-100" style="height: 80px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Info -->
+            <div class="col-lg-6">
+                <h1 class="display-6 fw-bold mb-3">{{ product.name }}</h1>
+                
+                <!-- Rating -->
+                <div class="d-flex align-items-center mb-3">
+                    <div class="rating-stars me-2">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star"></i>
+                    </div>
+                    <span class="text-muted">(4.2) 42 reviews</span>
+                    <span class="mx-2">|</span>
+                    <span class="text-success">In Stock</span>
+                </div>
+
+                <!-- Price -->
+                <div class="mb-4">
+                    <span class="display-6 text-primary fw-bold">$99.00</span>
+                    <span class="fs-4 text-muted text-decoration-line-through ms-3">{{ product.price }}</span>
+                    <span class="badge bg-success ms-2">Save $25</span>
+                </div>
+
+                <!-- Description -->
+                <p class="lead mb-4">{{ product.description }}</p>
+
+                <!-- Features -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">Key Features:</h6>
+                    <ul class="list-unstyled">
+                        {% for key, value in product.specs.items %}
+                          <li class="mb-2"><i class="bi bi-check2-circle text-success me-2"></i>
+                              <strong>{{ key|title }}:</strong> {{ value }}  
+                          </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Color Options -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">Color:</h6>
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-outline-secondary active" style="width: 40px; height: 40px; background-color: #000;"></button>
+                        <button class="btn btn-outline-secondary" style="width: 40px; height: 40px; background-color: #fff;"></button>
+                        <button class="btn btn-outline-secondary" style="width: 40px; height: 40px; background-color: #ff6b6b;"></button>
+                        <button class="btn btn-outline-secondary" style="width: 40px; height: 40px; background-color: #4ecdc4;"></button>
+                    </div>
+                </div>
+
+                <!-- Quantity -->
+                <div class="mb-4">
+                    <h6 class="fw-bold mb-3">Quantity:</h6>
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="input-group quantity-input">
+                            <button class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="number" class="form-control text-center" value="1" min="1">
+                            <button class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                        <span class="text-muted">Only {{ product.stock }} left.</span>
+                    </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="d-grid gap-2 d-md-flex mb-4">
+                    <button class="btn btn-primary btn-lg flex-fill">
+                        <i class="bi bi-cart-plus me-2"></i>Add to Cart
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg">
+                        <i class="bi bi-heart"></i>
+                    </button>
+                    <button class="btn btn-outline-primary btn-lg">
+                        <i class="bi bi-share"></i>
+                    </button>
+                </div>
+
+                <!-- Shipping Info -->
+                <div class="border rounded p-3 bg-light">
+                    <div class="row text-center">
+                        <div class="col-4">
+                            <i class="bi bi-truck text-primary fs-4"></i>
+                            <p class="mb-0 small mt-1">Free Shipping</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-arrow-clockwise text-primary fs-4"></i>
+                            <p class="mb-0 small mt-1">30-Day Returns</p>
+                        </div>
+                        <div class="col-4">
+                            <i class="bi bi-shield-check text-primary fs-4"></i>
+                            <p class="mb-0 small mt-1">2-Year Warranty</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product Tabs -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <ul class="nav nav-tabs product-tabs" id="productTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab">Description</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="specifications-tab" data-bs-toggle="tab" data-bs-target="#specifications" type="button" role="tab">Specifications</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="reviews-tab" data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab">Reviews (42)</button>
+                    </li>
+                </ul>
+                <div class="tab-content mt-4" id="productTabContent">
+                    <div class="tab-pane fade show active" id="description" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5>Product Description</h5>
+                                <p>These premium wireless headphones deliver exceptional audio quality with deep bass and crystal-clear highs. The active noise cancellation technology blocks out ambient noise, allowing you to focus on your music or calls.</p>
+                                <p>Designed for comfort during extended use, these headphones feature soft padding and an adjustable headband. The 30-hour battery life ensures you can enjoy your music all day without interruption.</p>
+                                <h6 class="mt-4">What's in the Box:</h6>
+                                <ul>
+                                  {% for key, value in product.specs.items %}
+                                    <li><strong>{{ key|title }}:</strong> {{ value }}</li>
+                                  {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="specifications" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td><strong>Brand</strong></td>
+                                        <td>{{ product.name }}</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Model</strong></td>
+                                        <td>AP-WH500</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Connectivity</strong></td>
+                                        <td>Bluetooth 5.0, 3.5mm</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Battery Life</strong></td>
+                                        <td>30 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Charging Time</strong></td>
+                                        <td>2 hours</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Weight</strong></td>
+                                        <td>280g</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Frequency Response</strong></td>
+                                        <td>20Hz - 20kHz</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reviews" role="tabpanel">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <!-- Review Summary -->
+                                <div class="d-flex align-items-center mb-4">
+                                    <div class="me-4">
+                                        <span class="display-6 fw-bold">4.2</span>
+                                        <div class="rating-stars">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star"></i>
+                                        </div>
+                                        <small class="text-muted">Based on 42 reviews</small>
+                                    </div>
+                                </div>
+
+                                <!-- Individual Reviews -->
+                                <div class="border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div>
+                                            <strong>Sarah Johnson</strong>
+                                            <div class="rating-stars small">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">2 days ago</small>
+                                    </div>
+                                    <p>Excellent sound quality and very comfortable to wear for long periods. The noise cancellation works great!</p>
+                                </div>
+
+                                <div class="border-bottom pb-3 mb-3">
+                                    <div class="d-flex justify-content-between align-items-start mb-2">
+                                        <div>
+                                            <strong>Mike Chen</strong>
+                                            <div class="rating-stars small">
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star-fill"></i>
+                                                <i class="bi bi-star"></i>
+                                            </div>
+                                        </div>
+                                        <small class="text-muted">1 week ago</small>
+                                    </div>
+                                    <p>Good value for money. Battery life is impressive and the build quality feels solid.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="mb-4">Related Products</h3>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card related-product shadow-sm border-0">
+                            <img src="https://images.pexels.com/photos/267320/pexels-photo-267320.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                 class="card-img-top" alt="Smart Watch" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Smart Watch</h6>
+                                <p class="text-primary fw-bold mb-2">$199</p>
+                                <button class="btn btn-outline-primary btn-sm w-100">View Product</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card related-product shadow-sm border-0">
+                            <img src="https://images.pexels.com/photos/341523/pexels-photo-341523.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                 class="card-img-top" alt="Smartphone" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Smartphone</h6>
+                                <p class="text-primary fw-bold mb-2">$599</p>
+                                <button class="btn btn-outline-primary btn-sm w-100">View Product</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card related-product shadow-sm border-0">
+                            <img src="https://images.pexels.com/photos/1667088/pexels-photo-1667088.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                 class="card-img-top" alt="Backpack" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Leather Backpack</h6>
+                                <p class="text-primary fw-bold mb-2">$89</p>
+                                <button class="btn btn-outline-primary btn-sm w-100">View Product</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="card related-product shadow-sm border-0">
+                            <img src="https://images.pexels.com/photos/279906/pexels-photo-279906.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                                 class="card-img-top" alt="Coffee Maker" style="height: 200px; object-fit: cover;">
+                            <div class="card-body">
+                                <h6 class="card-title">Coffee Maker</h6>
+                                <p class="text-primary fw-bold mb-2">$149</p>
+                                <button class="btn btn-outline-primary btn-sm w-100">View Product</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

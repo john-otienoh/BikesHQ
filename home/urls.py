@@ -2,12 +2,14 @@ from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from account.views import RegisterView, profile, CustomLoginView
 from account.forms import LoginForm
-from .views import home
+from .views import home, products, product_detail
 
 # app_name = "account"
 
 urlpatterns = [
     path("home/", home, name="home"),
+    path("products/", products, name="products"),
+    path("product/<slug:product>/", product_detail, name="product_detail"),
     path(
         "login/",
         CustomLoginView.as_view(

@@ -1,0 +1,73 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e40af;
+    --accent-color: #f59e0b;
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+}       
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+} */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.product-image {
+    height: 250px;
+    object-fit: cover;
+    width: 100%;
+}
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-weight: 500;
+}
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+/* .navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+} */
+.badge-sale {
+    background-color: var(--accent-color);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+.sidebar {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+}
+.filter-section {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+.filter-section h6 {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.pagination {
+    justify-content: center;
+    margin-top: 40px;
+}
+.page-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    padding: 60px 0;
+    color: white;
+    margin-bottom: 40px;
+}
