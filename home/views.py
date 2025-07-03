@@ -23,21 +23,30 @@ def home(request):
     )
 
 
-def products(request):
-    product_list = Product.objects.filter(is_available=True)
-    paginator = Paginator(product_list, 3)
-    page_number = request.GET.get('page', 1)
-    try:
-        all_products = paginator.page(page_number)
-    except EmptyPage:
-        all_products = paginator.page(paginator.num_pages)
-    except PageNotAnInteger:
-        all_products = paginator.page(1)
+def products(request, category_slug=None):
+
+    categories = None
+    product_list = None
+    if category_slug is not None:
+        categories = get_object_or_404(Category, slug=category_slug)
+        all_products = Product.objects.filter(category=categories, is_available=True)
+        product_count = all_products.count()
+    else:
+        product_list = Product.objects.filter(is_available=True)
+        product_count = product_list.count()
+        paginator = Paginator(product_list, 3)
+        page_number = request.GET.get('page', 1)
+        try:
+            all_products = paginator.page(page_number)
+        except EmptyPage:
+            all_products = paginator.page(paginator.num_pages)
+        except PageNotAnInteger:
+            all_products = paginator.page(1)
         
     return render(
         request,
         "home/products.html",
-        {"all_products": all_products},
+        {"all_products": all_products, 'product_count': product_count},
     )
 
 

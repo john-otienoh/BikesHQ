@@ -10,6 +10,7 @@ urlpatterns = [
     path("home/", home, name="home"),
     path("products/", products, name="products"),
     path("product/<slug:product>/", product_detail, name="product_detail"),
+    path("category/<slug:category_slug>/", products, name='product_by_category'),
     path(
         "login/",
         CustomLoginView.as_view(

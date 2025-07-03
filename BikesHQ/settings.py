@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Third Party Apps
     "social_django",
+    # 'django_db_log',
 ]
 
 MIDDLEWARE = [
@@ -56,6 +57,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # 'djangodblog.DBLogMiddleware',
 ]
 
 ROOT_URLCONF = "BikesHQ.urls"
@@ -71,6 +73,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "home.context_processors.menu_links",
             ],
         },
     },

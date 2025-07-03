@@ -35,8 +35,8 @@ class Category(models.Model):
             self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
-    # def get_absolute_url(self):
-    #     return reverse("account:profile", args=[self.id])
+    def get_absolute_url(self):
+        return reverse("product_by_category", args=[self.slug])
 
     def is_main_category(self):
         return self.parent is None
